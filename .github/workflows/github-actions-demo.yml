@@ -22,5 +22,8 @@ jobs:
         pytest python/tests/test_portfolio.py
     - name: Test with mutmut
       run: |
+        python -m venv mutmut
+        source mutmut/bin/activate
+        pip install -r python/requirements.txt
         pip install mutmut
         mutmut run
