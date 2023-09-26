@@ -27,4 +27,4 @@ jobs:
         pip install -r python/requirements.txt
         pip install mutmut
         cd python
-        mutmut run --CI
+        mutmut run --verbosity 0
