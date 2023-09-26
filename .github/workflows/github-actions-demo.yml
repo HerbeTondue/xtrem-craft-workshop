@@ -22,10 +22,9 @@ jobs:
         pytest python/tests/test_portfolio.py
     - name: Test with mutmut
       run: |
-        cd ..
         python -m venv mutmut
         source mutmut/bin/activate
-        cd xtrem-craft-workshop/python
         pip install -r python/requirements.txt
         pip install mutmut
+        cd python
         mutmut run
