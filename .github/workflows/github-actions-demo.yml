@@ -27,9 +27,9 @@ jobs:
         pip install -r python/requirements.txt
         pip install mutmut
         cd python
-        mutmut run --CI
+        mutmut run --CI > mutmut_report.txt # Redirige la sortie
     - name: Upload Mutmut Report
       uses: actions/upload-artifact@v2
       with:
         name: mutmut-report
-        path: ./mutmut/out
+        path: python/mutmut_report.txt
