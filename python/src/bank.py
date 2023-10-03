@@ -1,5 +1,6 @@
 from typing import Dict
 from .currency import Currency
+from .money import Money
 from .missing_exchange_rate_error import MissingExchangeRateError
 
 
@@ -18,10 +19,11 @@ class Bank:
     def add_exchange_rate(self, currency_init: Currency, currency_final: Currency, exchange_rate: float) -> None:
         self._exchange_rates[f'{currency_init.value}->{currency_final.value}'] = exchange_rate
 
-    def convert_currency(self, amount: float, currency_init: Currency, currency_final: Currency) -> float:
-        if not (currency_init.value == currency_final.value or f'{currency_init.value}->{currency_final.value}' in self._exchange_rates):
-            raise MissingExchangeRateError(currency_init, currency_final)
-        if currency_init.value == currency_final.value:
-            return amount
+    def convert_currency(self, money_initial :Money, currency_final: Currency) -> float:
+        if not (money_initial.currency == currency_final or f'{money_initial.currency.value}->{currency_final.value}' in self._exchange_rates):
+            raise MissingExchangeRateError(money_initial.currency, currency_final)
+        if money_initial.currency == currency_final:
+            return money_initial.amount
         else:
-            return amount * self._exchange_rates[f'{currency_init.value}->{currency_final.value}']
+            return money_initial.amount * self._exchange_rates[f'{money_initial.currency.value}->{currency_final.value}']
+        
