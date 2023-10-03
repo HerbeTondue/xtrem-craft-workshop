@@ -8,7 +8,7 @@ Individuellement, donnez les 3 idées les plus importantes sur le TDD et une que
 - Itérations courtes et fréquentes
 - Assurance de la qualité et de la robustesse du code (fonctionnalités testées de manière automatisées)
 
-- Comment faire pour que les tests soient suffisamment complets et pertinents ? (couverture de code, tests unitaires, tests d'intégration, tests fonctionnels, tests de non-régression, tests de performance, tests de sécurité, ...)
+- Comment faire pour que les tests soient suffisamment complets et pertinents ? (couverture de code, tests unitaires, tests d'intégration, tests fonctionnels, tests de non-régression, ...)
 
 ## Mob programming
 
