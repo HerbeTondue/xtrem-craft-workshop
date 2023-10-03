@@ -28,8 +28,3 @@ jobs:
         pip install mutmut
         cd python
         mutmut run --CI
-    - name: Archive Mutmut results
-      uses: actions/upload-artifact@v2
-      with:
-        name: mutmut-results
-        path: python/.mutmut
