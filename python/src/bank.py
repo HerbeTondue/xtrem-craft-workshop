@@ -12,7 +12,7 @@ class Bank:
 
     @staticmethod
     def create_bank(currency_init: Currency, currency_final: Currency, exchange_rate: float) -> "Bank":
-        bank = Bank({})
+        bank = Bank({}) 
         bank.add_exchange_rate(currency_init, currency_final, exchange_rate)
         return bank
     

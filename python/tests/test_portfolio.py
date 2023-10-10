@@ -36,13 +36,3 @@ class TestPortfolio:
         
         # Assert
         assert value == 1.0
-
-    # def test_evaluate_portfolio(self):
-    #     # Arrange
-    #     portfolio: Portfolio
-    #     # Act
-    #     Portfolio.evaluate_portfolio(portfolio)
-
-    #     # Assert
-    #     assert isinstance(Portfolio.evaluate_portfolio(5, 10), float)
-    #     assert Portfolio.evaluate_portfolio(5, 10) == 50
